@@ -1,0 +1,85 @@
+.BG_BD_INDEX{
+  background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/BG_IMG.jpg");
+  margin: none;
+  
+}
+
+.Items_Container{
+                  width: 1000px;
+                  height: 750px;
+                  top: 50%;
+                  left: 50%;
+                  margin-top:-325px;
+                  margin-left:-500px;
+                  position: absolute;               
+}
+
+.BackGround_TEXT1{
+                    background: none;
+}
+
+.BackGround_TEXT1 p{
+                      text-align: center;
+                      color: white;
+                      font-size: 100px;
+}
+
+.BackGround_TEXT2{
+                    background: none;
+}
+
+.BackGround_TEXT2 p{
+                      text-align: center;
+                      color: white;
+                      font-size: 15px;
+}
+
+.BackGround_Button{                   
+                     text-align: center;
+}
+
+.BackGround_Button a{
+                      text-decoration: none;
+                      text-align: center;
+                      padding: none;
+                      height: 100%;
+                      width: 100%;                     
+} 
+
+.Big_Button{
+              background-color: #8A2BE2;
+              padding: 60px 128px;
+              border: none;
+              border-radius: 30px;
+              box-shadow: 15px 15px 5px #562087; 
+              /* 
+              box-shadow Spiegazione:
+              -i primi due valori specificano quanto deve essere grande l'ombra.
+              -il terzo parametro specifica quanto intenso deve essere il blur. 
+              -l'ultimo campo specifica il colore.
+              border-radius Spiegazione:
+              - Specifico la smussatura dei bordi.
+              */
+}
+
+.Big_Button:hover {
+                    background-color: #3e8e41
+                  }
+
+.Big_Button:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(40px);
+}
+
+.Big_Button span{
+              font-size:60px;                                        
+              color: white;
+
+}
+
+.Font_For_Text {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
