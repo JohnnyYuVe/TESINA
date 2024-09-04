@@ -6,7 +6,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="http://localhost/php_program/GameOfHistory/CSS_FILE/INDEX_PAGE_STYLE.css">
+    
 </head>	
 
 

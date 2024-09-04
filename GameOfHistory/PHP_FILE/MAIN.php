@@ -57,30 +57,125 @@ body {
 }
 
 .Main_Container_Item{
-                    background-color: white;
-                    //padding: 30px 40px;
+                    background-color:#736372;
+                    padding: 30px 40px;
                     position: relative ;
-                    left: 0%;
+                    left: 7%;
                     top: 30%;
-                    width: 50%;
-                    height: 50% ;
+                    width: 80%;
+                    height: auto ;
+                    border-radius: 30px;
+
+
+
+}
+
+
+.TEXT_conteiner{
+                background-color: grey;
+                height: 700px;
+                
+                border-radius: 5px;
+                padding: none;
+                text-align: center;
+                margin-bottom: 100px;
+                
+
+}
+hr{
+    border: 3px solid black;
+}
+
+.Box_container{
+            width:90%;
+            height: auto;       
+            
+            display: inline-block;
+          
+            padding: 5% 5%;
 
 }
 
 
 
+.Button_Container{
+                  text-align: right;
+                  padding: 10px 10px;
+}
+
+.Disposizione{
+              
+              margin: none;
+              padding-block: 10px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+}
+
+
+
+
+
+.Button_Art{
+            border-radius: 12%;
+
+}
+
+.Button_Art:hover {
+                    background-color: #3e8e41
+                  }
+
+.Button_Art:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(10px);
+}
+
+
+.articolo{
+          background-color: #8A2BE2;    
+          text-align: center;
+          padding: 25px 25px;
+          width: 540px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          margin-inline: 40px;
+
+          border-color: black;
+          border-style: solid;  
+
+
+
+}
+
+.articolo img{
+               
+               height: 300px;
+
+}
+
+
+.articolo p{
+            text-align:left ;
+}
+
+.PageScroll{
+            text-align: center;
+            padding-block: 30px;
+
+
+}
 
 .PageScroll a {
-  color: white;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
+              color: black;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;
 }
 
 .PageScroll a.active {
-  background-color: dodgerblue;
-  color: white;
+                      background-color: dodgerblue;
+                      color: white;
 }
 
 
@@ -154,18 +249,135 @@ body {
 </div>
 
 
-
 <div class="Main_Container_Item">
-dfasdfffffffffffff
+        
+        <div class="TEXT_conteiner">
+
+                slider immagini
+
+        </div>
+<hr>
+    <div class="Box_container">
+
+      <div class="Disposizione">
+              <div class="articolo Font_For_Text">
+                                           <img src="" alt="Foto articolo">
+                                            
+                                            <p>
+
+                                             Nome_articolo</br>
+                                              &#8364;Prezzo</br>
+                                            </p>
+
+                                            <p>
+                                              descrizione breve dell'articolo
+                                            </p>
+
+                              <div class="Button_Container">
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">favorite</span>      
+                                    </button>
+       
+                                    <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">add</span>      
+                                    </button>
+                           <!--
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                            -->        
+                              </div>
+              </div>
+
+              <div class="articolo Font_For_Text">
+                                           <img src="" alt="Foto articolo">
+                                            
+                                            <p>
+
+                                             Nome_articolo</br>
+                                              &#8364;Prezzo</br>
+                                            </p>
+
+                                            <p>
+                                              descrizione breve dell'articolo
+                                            </p>
+
+                              <div class="Button_Container">
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+       
+                                    <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                           
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                              </div>
+              </div>
+
+              <div class="articolo Font_For_Text">
+                                           <img src="" alt="Foto articolo">
+                                            
+                                            <p>
+
+                                             Nome_articolo</br>
+                                              &#8364;Prezzo</br>
+                                            </p>
+
+                                            <p>
+                                              descrizione breve dell'articolo
+                                            </p>
+
+                              <div class="Button_Container">
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+       
+                                    <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                           
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                              </div>
+              </div>
 
 
-</div> 
+              <div class="articolo Font_For_Text">
+                                           <img src="" alt="Foto articolo">
+                                            
+                                            <p>
+
+                                             Nome_articolo</br>
+                                              &#8364;Prezzo</br>
+                                            </p>
+
+                                            <p>
+                                              descrizione breve dell'articolo
+                                            </p>
+
+                              <div class="Button_Container">
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+       
+                                    <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                           
+                                    <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
+                                              <span class="material-symbols-outlined">support_agent</span>      
+                                    </button>
+                              </div>
+              </div>
 
 
 
-<!--
-
-<div Class="PageScroll">
+    </div> 
+    <div Class="PageScroll Font_For_Text">
    
     <a href="#">&laquo;</a>      
     <a href="#">1</a>
@@ -174,7 +386,9 @@ dfasdfffffffffffff
     <a href="#">&raquo;</a>   
 
 <div>
--->
+</div>                
+
+
 </body>
 
 </html>
