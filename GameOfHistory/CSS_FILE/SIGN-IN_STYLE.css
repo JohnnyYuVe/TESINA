@@ -1,0 +1,159 @@
+body {
+      margin:0;
+      background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/futuristic-casino-architecture.jpg);
+      background-repeat:no-repeat;
+      background-size:cover;
+      padding: none;
+      margin: none;     
+}
+h1{
+  text-align: center;
+}
+
+.Font_For_Text{
+              font-family: "New Amsterdam", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              padding: none;
+                margin: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.MAIN_Conteiner{
+             
+                width: 70%;                
+                height: auto;
+
+
+                background-color:  #8A2BE2;
+                position: relative;
+
+                display: flex;
+                flex-wrap: wrap;
+                
+                
+                  border: 5px solid;
+                  border-radius: 15px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  
+}
+
+.BOX_Destro{
+             
+}
+
+.BOX_Destro img{
+               
+                height: 820px;
+                width: 750px;
+}
+
+.BOX_Sinistro{         
+                  width: 42%;
+                  position: relative;
+                 
+}
+
+.BOX_Sinistro h1{
+                      text-align: center;
+                      font-size: 55px;
+}
+
+
+.FORM_Conteiner{
+                
+}
+
+.FORM_Conteiner input[type=text]{
+                        height: 40px ;
+                        width: 300px;
+                        display: block;
+                        margin-bottom: 30px;
+                        left: 25%;
+                        position: relative;  
+                        width: 42%;          
+                        margin-top: 30; 
+}
+
+.FORM_Conteiner input[type=number]{
+                        height: 40px ;
+                        width: 300px;
+                        display: block;
+                        margin-bottom: 30px;
+                        left: 25%;
+                        position: relative;  
+                        width: 42%;          
+                        margin-top: 30; 
+}
+
+.FORM_Conteiner input[type=radio]{
+                            left: 30%;
+                            position: relative;
+}
+
+.RR{
+                            left: 30%;
+                            position: relative;
+}
+
+.FORM_Conteiner  label{
+                         left: 25%;
+                        position: relative;
+                        font-size: 30px;
+
+}
+
+
+.BUTTON_Conteiner{
+                  position: relative;
+                  left: 3%;
+}
+
+.BUTTON_REGISTRATI{ 
+              width: 48%;
+              height: 60px;
+              font-size: 30px;
+              border-color:NONE;
+              border-radius: 15px;
+              box-shadow: 15px 15px 1px #562087;
+
+}
+
+.BUTTON_REGISTRATI:hover  {
+                    background-color: #3e8e41
+                  }
+
+.BUTTON_REGISTRATI:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(10px);
+}
+
+.BUTTON_ANNULLA{
+              width: 48%;
+              height: 60px;
+              font-size: 30px;
+              border-color:NONE;
+              border-radius: 15px;
+              box-shadow: 15px 15px 1px #562087;
+}
+
+.BUTTON_ANNULLA:hover  {
+                    background-color: #3e8e41
+                  }
+
+.BUTTON_ANNULLA:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(10px);
+}

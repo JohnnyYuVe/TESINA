@@ -1,0 +1,202 @@
+body {
+      margin:0;
+      background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/bowling-alley-with-neon-lights.jpg);
+      background-repeat:no-repeat;
+      background-size:cover;     
+}
+
+hr{
+    border: 10px solid #8A2BE2;
+}
+
+.Font_For_Text{
+              font-family: "New Amsterdam", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.navigation_bar {
+  overflow: hidden;
+  background-color: /*#8A2BE2*/none ;
+  position: fixed ;
+  text-align: center;
+  left: 5%;
+  top: 5%;
+  border-radius: 100px;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+.Button_Menu_Nav{
+                padding: 30px 90px;
+                border: none;
+                border-radius: 30px;
+                box-shadow: 5px 10px 0px #562087;
+                background-color: #8A2BE2;
+
+                color: white;
+                font-size: 15px; 
+
+}
+
+.Button_Menu_Nav:hover {
+                    background-color: #3e8e41
+                  }
+
+.Button_Menu_Nav:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(10px);
+}
+
+.Main_Container_Item{
+                    background-color: #736372;
+                    padding: 30px 40px;
+                    position: relative ;
+                    left: 7%;                 
+                    width: 80%;
+                    height: auto;
+                    margin-top: 25%; /*da usare al posto di top altrimenti non ho overlay dei vari blocchi */
+                    border-radius: 30px;
+
+
+
+}
+
+.TEXT_conteiner{
+                background-color: grey;
+                height: 700px;
+                
+                border-radius: 5px;
+                padding: none;
+                text-align: center;
+                margin-bottom: 100px;
+                
+
+}
+
+.mySlides{
+        display: none;
+        width: 100%;
+}
+
+.Box_container{
+            width:90%;
+            height: auto;       
+            
+            display: inline-block;
+          
+            padding: 5% 5%;
+
+}
+
+.Button_Container{
+                  text-align: right;
+                  padding: 10px 10px;
+
+}
+
+.Disposizione{
+              margin: none;
+              padding-block: 10px;            
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+}
+
+.Button_Art{
+            border-radius: 12%;
+}
+
+.Button_Art:hover {
+                    background-color: #3e8e41
+                  }
+
+.Button_Art:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(10px);
+}
+
+.articolo{
+          background-color: #8A2BE2;    
+          text-align: center;
+          padding: 25px 25px;
+          width: 540px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          margin-inline: 40px;
+
+          border-color: black;
+          border-style: solid;  
+}
+
+.articolo img{              
+               height: 300px;
+
+}
+
+.articolo p{
+            text-align:left ;
+}
+
+.ScorriPagina{
+            text-align: center;
+            font-size: 30px;
+            padding-block: 30px;
+            width: 100%;
+            
+            z-index: 1;
+}
+
+.ScorriPagina a {
+              color: white;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;
+}
+
+.ScorriPagina a.active {
+                      background-color: dodgerblue;
+                      color: white;
+}
+
+.ScorriPagina a:hover:not(.active) {
+                                background-color: #ddd;
+}
+
+.Container_info{
+              background-color: #736372;
+              width: 100%;
+              height: auto;
+              text-align: center;
+              padding-top: 40px;
+              padding-bottom: 10px;
+              display: flex;
+            
+
+
+}
+
+.Box_contact{
+      width: 32%;
+      height: auto  ;
+      display: inline-block;
+      text-align: center;
+      flex: 1;
+      padding-left: 30px;     
+      background-color: ;  
+}      
+
+
+.Box_contact   img{
+                    width:30px ;
+}
