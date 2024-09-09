@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE RECORD_CARRELLO SYSTEM "http://localhost/php_program/GameOfHistory/XML%20_FILE/DTD_SCHEMA/CARRELLO_STRUTTURA.dtd">
+
+<RECORD_CARRELLO>
+				<CARRELLO>
+						<ID_CLIENT>test</ID_CLIENT>
+						<ID_ARTICOLO>test</ID_ARTICOLO>
+				</CARRELLO>	
+
+
+</RECORD_CARRELLO>

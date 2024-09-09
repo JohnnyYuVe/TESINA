@@ -1,0 +1,103 @@
+      body{                 
+          background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/view-3d-arcade-game-box.jpg");
+          background-repeat:no-repeat;
+          background-size:cover;       
+      }
+
+.Font_For_Text{
+              font-family: "New Amsterdam", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              padding: none;
+              margin: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.MAIN_Conteiner{
+                width: 70%;                
+                height: 80%;
+
+
+                background-color:  #8A2BE2;
+                position: relative;
+
+                display: flex;
+                flex-wrap: wrap;
+                
+                
+                  border: 5px solid;
+                  border-radius: 15px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+}
+
+.BackGround_TEXT1{
+                  width: 100%;
+                  text-align: center;  
+
+}
+
+.BackGround_TEXT1 h1{
+                      font-size: 70px;
+
+}
+
+.BackGround_TEXT1 p{
+                      font-size: 30px;
+                      color: white;
+}
+
+.BackGround_Button{
+                  width: 100%;
+                  text-align: center;  
+
+}
+
+.BackGround_TEXT2{
+                  width: 100%;
+                  text-align: center; 
+
+}
+
+.Big_Button{
+              background-color: #8A2BE2;
+              padding: 60px 128px;
+              border: none;
+              border-radius: 30px;
+              box-shadow: 15px 15px 5px black;
+              border-color:black;
+              border-style: solid; 
+              /* 
+              box-shadow Spiegazione:
+              -i primi due valori specificano quanto deve essere grande l'ombra.
+              -il terzo parametro specifica quanto intenso deve essere il blur. 
+              -l'ultimo campo specifica il colore.
+              border-radius Spiegazione:
+              - Specifico la smussatura dei bordi.
+              */
+}
+
+.Big_Button:hover {
+                    background-color: #3e8e41
+                  }
+
+.Big_Button:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #666;
+                  transform: translateY(40px);
+}
+
+.Big_Button span{
+              font-size:60px;                                        
+              color: white;
+
+}

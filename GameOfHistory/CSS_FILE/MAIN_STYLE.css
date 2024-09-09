@@ -41,6 +41,8 @@ hr{
                 border-radius: 30px;
                 box-shadow: 5px 10px 0px #562087;
                 background-color: #8A2BE2;
+                border-color:black;
+                border-style: solid;
 
                 color: white;
                 font-size: 15px; 

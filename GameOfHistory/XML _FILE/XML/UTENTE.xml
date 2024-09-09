@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE RECORD_UTENTE SYSTEM "http://localhost/php_program/GameOfHistory/XML%20_FILE/DTD_SCHEMA/UTENTE_STRUTTURA.dtd">
+
+
+<RECORD_UTENTE>
+
+		<Utente Privieggio="ADMIN">
+				
+				<INFO_PERSONA ID_PERSONA="0">
+							<Nome>a</Nome>
+							<Cognome>aa</Cognome>
+							<Email>3aaa</Email>
+							<Eta>4aaaa</Eta>
+							<Sesso>MASCHIO</Sesso>
+				</INFO_PERSONA>
+
+				<Data_Registrazione>6aaaaaa</Data_Registrazione>
+				<Punti_History>7aaaaaaa</Punti_History>
+				<Membership>BRONZE</Membership>
+
+		</Utente>	
+
+
+</RECORD_UTENTE>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT RECORD_ARTICOLO (ARTICOLO*)>
+
+<!ELEMENT ARTICOLO(Nome, Prezzo, Descrizione, IMG+)>
+
+<!ATTLIST ARTICOLO 
+          ART_ID CDATA #REQUIRED>
+
+<!ELEMENT Nome(#PCDATA)>
+<!ELEMENT Prezzo(#PCDATA)>
+<!ELEMENT Descrizione(#PCDATA)>
+
+<!ELEMENT IMG(Percorso, Nome_IMG, Estensione)>
+<!ELEMENT Percorso(#CDATA)>
+<!ELEMENT Nome_IMG(#CDATA)>
+<!ELEMENT Estensione(#CDATA)>
+
+<!ATTLIST Estensione CDATA(jpg | png | svg | jpeg) "jpg" #REQUIRED> 

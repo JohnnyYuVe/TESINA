@@ -10,7 +10,26 @@
               echo "<p>dati mancanti!!!</p>"; 
         }else{
               echo "<p> controllo avvenuto</p>";
-              exit(header( $Path));      
+              echo "<p>Inserimento dati nella sessione</p>";
+              
+
+
+
+
+
+
+              session_start();
+
+
+
+              $_SESSION['ID']=  ;
+              $_SESSION['Nome']=;
+              $_SESSION['Cognome']=;
+              $_SESSION['Email']=;
+              $_SESSION['Password']=;
+              $_SESSION['Sesso']=;
+                        
+              exit(header( $Path));     
               
         }
     }
@@ -66,7 +85,7 @@
                                   </div>  
                                 
                                
-                              </form>
+                                </form>
                                </div>  
       </div>  
 
@@ -78,4 +97,14 @@
   
 </html>
 
+<?php
 
+
+function CheckInfoClient(){
+  //APRO IL FILE ARTICOLO.XML
+  doc("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.xml")/Utenti/User/INFO_PERSONA[ID_PERSONA=$_POST[]]
+}
+
+
+
+?>

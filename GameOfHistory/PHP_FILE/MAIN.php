@@ -1,7 +1,11 @@
+<?php ?>
+
+
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <head>	
-	
+
   <div class="Link_used">	
     <title>GameOFHistory</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,9 +70,12 @@
 
 
           <div class="Box_container">
+              
               <div class="Disposizione">
+                    
+                    <?php ?>
                     <div class="articolo Font_For_Text">
-                                                 <img src="" alt="Foto articolo">                                               
+                                                 <img src="http://localhost/php_program/GameOfHistory/IMG_FILE/bowling-alley-with-neon-lights.jpg" alt="Foto articolo">                                               
                                                   <p> 
                                                       Nome_articolo</br>
                                                       &#8364;Prezzo</br>
@@ -84,74 +91,8 @@
                                           </button>                   
                                     </div>
                     </div>
-                    <div class="articolo Font_For_Text">
-                                                 <img src="" alt="Foto articolo">                                               
-                                                  <p> 
-                                                      Nome_articolo</br>
-                                                      &#8364;Prezzo</br>
-                                                  </p>
-                                                  <p>descrizione breve dell'articolo</p>                                                
-                                    <div class="Button_Container">
-                                          <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
-                                                  <span class="material-symbols-outlined">favorite</span>      
-                                          </button>
 
-                                          <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' ">
-                                                 <span class="material-symbols-outlined">add<span>     
-                                          </button>                   
-                                    </div>
-                    </div>
-                    <div class="articolo Font_For_Text">
-                                                 <img src="" alt="Foto articolo">                                               
-                                                  <p> 
-                                                      Nome_articolo</br>
-                                                      &#8364;Prezzo</br>
-                                                  </p>
-                                                  <p>descrizione breve dell'articolo</p>                                                
-                                    <div class="Button_Container">
-                                          <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
-                                                  <span class="material-symbols-outlined">favorite</span>      
-                                          </button>
-
-                                          <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' ">
-                                                 <span class="material-symbols-outlined">add<span>     
-                                          </button>                   
-                                    </div>
-                    </div>
-                    <div class="articolo Font_For_Text">
-                                                 <img src="" alt="Foto articolo">                                               
-                                                  <p> 
-                                                      Nome_articolo</br>
-                                                      &#8364;Prezzo</br>
-                                                  </p>
-                                                  <p>descrizione breve dell'articolo</p>                                                
-                                    <div class="Button_Container">
-                                          <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
-                                                  <span class="material-symbols-outlined">favorite</span>      
-                                          </button>
-
-                                          <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' ">
-                                                 <span class="material-symbols-outlined">add<span>     
-                                          </button>                   
-                                    </div>
-                    </div>
-                    <div class="articolo Font_For_Text">
-                                                 <img src="" alt="Foto articolo">                                               
-                                                  <p> 
-                                                      Nome_articolo</br>
-                                                      &#8364;Prezzo</br>
-                                                  </p>
-                                                  <p>descrizione breve dell'articolo</p>                                                
-                                    <div class="Button_Container">
-                                          <button type="button" class="Button_Art Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' "> 
-                                                  <span class="material-symbols-outlined">favorite</span>      
-                                          </button>
-
-                                          <button type="button" class="Button_Art  Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/INDEX_PAGE.php' ">
-                                                 <span class="material-symbols-outlined">add<span>     
-                                          </button>                   
-                                    </div>
-                    </div>
+                    
               </div>
                
               <div Class="ScorriPagina Font_For_Text">
