@@ -42,3 +42,8 @@
 </html>
 
 
+<?php
+    unset($_SESSION['T_EMAIL']);
+    unset($_SESSION['T_PASS']);
+    session_destroy();  
+?>

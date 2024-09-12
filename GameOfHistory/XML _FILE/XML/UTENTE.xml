@@ -6,11 +6,46 @@
 
 		<Utente Privieggio="ADMIN">
 				
-				<INFO_PERSONA ID_PERSONA="0">
+				<INFO_PERSONA ID_Persona="Uno1">
 							<Nome>a</Nome>
 							<Cognome>aa</Cognome>
-							<Email>3aaa</Email>
 							<Eta>4aaaa</Eta>
+							<Email>1234</Email>							
+							<Password>1234</Password>
+							<Sesso>MASCHIO</Sesso>
+				</INFO_PERSONA>
+
+				<Data_Registrazione>6aaaaaa</Data_Registrazione>
+				<Punti_History>7aaaaaaa</Punti_History>
+				<Membership>BRONZE</Membership>
+
+		</Utente>
+
+		<Utente Privieggio="ADMIN">
+				
+				<INFO_PERSONA ID_Persona="Uno2">
+							<Nome>a</Nome>
+							<Cognome>aa</Cognome>
+							<Eta>4aaaa</Eta>
+							<Email>3aaa</Email>						
+							<Password>1234</Password>
+							<Sesso>MASCHIO</Sesso>
+				</INFO_PERSONA>
+
+				<Data_Registrazione>6aaaaaa</Data_Registrazione>
+				<Punti_History>7aaaaaaa</Punti_History>
+				<Membership>BRONZE</Membership>
+
+		</Utente>
+
+		<Utente Privieggio="ADMIN">
+				
+				<INFO_PERSONA ID_Persona="Uno3">
+							<Nome>a</Nome>
+							<Cognome>aa</Cognome>
+							<Eta>4aaaa</Eta>
+							<Email>3aaa</Email>							
+							<Password>1234</Password>
 							<Sesso>MASCHIO</Sesso>
 				</INFO_PERSONA>
 

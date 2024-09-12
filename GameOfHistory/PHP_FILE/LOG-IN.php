@@ -14,13 +14,12 @@
               
 
 
-
-
-
-
               session_start();
+              Extract_Utente_Info();
+              
 
 
+/*
 
               $_SESSION['ID']=  ;
               $_SESSION['Nome']=;
@@ -30,7 +29,7 @@
               $_SESSION['Sesso']=;
                         
               exit(header( $Path));     
-              
+*/              
         }
     }
 
@@ -99,12 +98,62 @@
 
 <?php
 
+function Validate_DomDocument(){
 
-function CheckInfoClient(){
-  //APRO IL FILE ARTICOLO.XML
-  doc("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.xml")/Utenti/User/INFO_PERSONA[ID_PERSONA=$_POST[]]
 }
 
 
+function Extract_Utente_Info(){
+
+$TEST=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.XML") or die("Error: Cannot create object");
+$Index_End=$TEST->count();
+$Path='Location:http://localhost/php_program/GameOfHistory/PHP_FILE/MAIN.php';
+
+//qui ho usato simpleXML in quanto è più facile per visitare gli elementi/attributi di un record;
+
+for($Index_Start=0; $Index_Start<$Index_End; $Index_Start++){
+      
+      $ID_PERSONA_VALUE=$TEST->Utente[$Index_Start]->INFO_PERSONA["ID_Persona"];
+      echo"<p>";
+      echo "valore strcmp(".$Index_Start."):".strcmp($ID_PERSONA_VALUE,"uno1")."</br>"."</br>";
+      echo"</p>";
+          $Value_Privieggio=          $TEST->Utente["Privieggio"];
+          $Value_ID_Persona=          $TEST->Utente[$Index_Start]->INFO_PERSONA["ID_Persona"];
+          $Value_Nome=                $TEST->Utente[$Index_Start]->INFO_PERSONA->Nome;
+          $Value_Cognome=             $TEST->Utente[$Index_Start]->INFO_PERSONA->Cognome;
+          $Value_Email=               $TEST->Utente[$Index_Start]->INFO_PERSONA->Email;
+          $Value_Eta=                 $TEST->Utente[$Index_Start]->INFO_PERSONA->Eta;
+          $Value_Sesso=               $TEST->Utente[$Index_Start]->INFO_PERSONA->Sesso;
+          $Value_Password=            $TEST->Utente[$Index_Start]->Password;
+          $Value_Data_Registrazione=  $TEST->Utente[$Index_Start]->Data_Registrazione;
+          $Value_Punti_History=       $TEST->Utente[$Index_Start]->Punti_History;
+          $Value_Membership=          $TEST->Utente[$Index_Start]->Membership;
+      //Controllo su i dati di login   
+      if( !(strcmp($Value_Email,$_POST["T_EMAIL"]) && strcmp($ID_PERSONA_VALUE,$_POST['T_PASS'])) ){
+          
+           $_SESSION['T_EMAIL']=$_POST["T_EMAIL"];
+           $_SESSION['T_PASS']=$_POST['T_PASS'];
+           exit( header($Path) );
+           
+        /*per il debug rimuovere il commento e commentare la funzione exit( header($Path) ); cosi da vedere il risultato 
+          echo"<p>";
+          echo $Value_Privieggio."</br>";
+          echo $TEST->Utente[$Index_Start]->INFO_PERSONA["ID_Persona"]."</br>";
+          echo $Value_ID_Persona."</br>";
+          echo $Value_Nome."</br>";
+          echo $Value_Cognome."</br>";
+          echo $TEST->Utente[$Index_Start]->INFO_PERSONA->Eta."</br>";
+          echo $TEST->Utente[$Index_Start]->INFO_PERSONA->Sesso."</br>";
+          echo $TEST->Utente[$Index_Start]->Data_Registrazione."</br>";
+          echo $TEST->Utente[$Index_Start]->Punti_History."</br>";
+          echo $TEST->Utente[$Index_Start]->Password."</br>";    
+          echo $TEST->Utente[$Index_Start]->Membership."</br>";
+          echo"</p>";
+          */
+          
+      }
+}
+
+}
 
 ?>

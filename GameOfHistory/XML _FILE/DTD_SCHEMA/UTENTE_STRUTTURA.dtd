@@ -6,22 +6,22 @@
 <!ELEMENT Utente (INFO_PERSONA+, Data_Registrazione, Punti_History, Membership)>
 
 <!ATTLIST Utente 
-          Privieggio  (ADMIN | GESTORE | AMMINISTRATORE | CLIENTE | NONE) "NONE" >
+          Privieggio (ADMIN | GESTORE | AMMINISTRATORE | CLIENTE | NONE) "NONE" >
 
 
-<!ELEMENT INFO_PERSONA(Nome, Cognome, Email, Eta, Sesso)> 
-<!ATTLIST INFO_PERSONA ID_PERSONA ID #REQUIRED> 
+<!ELEMENT INFO_PERSONA (Nome, Cognome, Eta, Email, Password, Sesso)> 
+<!ATTLIST INFO_PERSONA 
+		  ID_Persona ID  #REQUIRED>
 
 <!ELEMENT Nome (#PCDATA)>
 <!ELEMENT Cognome (#PCDATA)>
-<!ELEMENT Email (#PCDATA)>
 <!ELEMENT Eta (#PCDATA)>  
-
-<!ELEMENT Sesso (#PCDATA)>
-<!ATTLIST Sesso (MASCHIO | FEMMINA | N/D) "N/D" >
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Password (#PCDATA)>
+<!ELEMENT Sesso (#PCDATA)> 
 
 <!ELEMENT Data_Registrazione (#PCDATA)>
 <!ELEMENT Punti_History (#PCDATA)>
 <!ELEMENT Membership (#PCDATA)>
-<!ATTLIST Membership (BRONZE | IRON | SILVER | GOLD | EMERALD | PLATINUM | DIAMOND | MYTHRIL) "BRONZE" > 
+<!--<!ATTLIST Membership (BRONZE | IRON | SILVER | GOLD | EMERALD | PLATINUM | DIAMOND | MYTHRIL) "BRONZE" >  -->
 
