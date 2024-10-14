@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT RECORD_ARTICOLO (ARTICOLO*)>
+<!ELEMENT ARTICOLO (Nome, Prezzo, Descrizione)>
+
+
+<!ELEMENT Nome (#PCDATA)>
+<!ELEMENT Prezzo (#PCDATA)>
+<!ELEMENT Descrizione (#PCDATA)>

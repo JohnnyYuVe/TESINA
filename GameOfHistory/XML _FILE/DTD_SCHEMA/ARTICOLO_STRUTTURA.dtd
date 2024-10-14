@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT RECORD_ARTICOLO (ARTICOLO*)>
 
-<!ELEMENT ARTICOLO(Nome, Prezzo, Descrizione, IMG+)>
+<!ELEMENT RECORD_ARTICOLO (ARTICOLO*)>
+<!ELEMENT ARTICOLO (Nome, Prezzo, Descrizione, IMG+)>
 
 <!ATTLIST ARTICOLO 
-          ART_ID CDATA #REQUIRED>
+          ART_ID ID #REQUIRED>
 
-<!ELEMENT Nome(#PCDATA)>
-<!ELEMENT Prezzo(#PCDATA)>
-<!ELEMENT Descrizione(#PCDATA)>
+<!ATTLIST ARTICOLO           
+          Categoria CDATA #REQUIRED>
 
-<!ELEMENT IMG(Percorso, Nome_IMG, Estensione)>
-<!ELEMENT Percorso(#CDATA)>
-<!ELEMENT Nome_IMG(#CDATA)>
-<!ELEMENT Estensione(#CDATA)>
+<!ELEMENT Nome (#PCDATA)>
+<!ELEMENT Prezzo (#PCDATA)>
+<!ELEMENT Descrizione (#PCDATA)>
 
-<!ATTLIST Estensione CDATA(jpg | png | svg | jpeg) "jpg" #REQUIRED> 
+
+<!ELEMENT IMG (Percorso, Nome_IMG, Estensione)>
+<!ELEMENT Percorso (#PCDATA)>
+<!ELEMENT Nome_IMG (#PCDATA)>
+<!ELEMENT Estensione (#PCDATA)>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE RECORD_ARTICOLO SYSTEM "http://localhost/php_program/GameOfHistory/XML%20_FILE/DTD_SCHEMA/ARTICOLO_STRUTTURA.dtd">
+<RECORD_ARTICOLO>
+	
+				<ARTICOLO ART_ID="ART001" Categoria="QUATTRO">
+
+							<Nome>God of war</Nome>
+							<Prezzo>79,99</Prezzo>
+							<Descrizione>Gioco bellissimo
+							</Descrizione>
+						
+							<IMG>
+								<Percorso>http://localhost/php_program/GameOfHistory/IMG_FILE/</Percorso>
+								<Nome_IMG>bowling-alley-with-neon-lights</Nome_IMG>
+								<Estensione>.jpg</Estensione>
+							</IMG>	
+						
+				</ARTICOLO>
+
+				<ARTICOLO ART_ID="ART002" Categoria="QUATTRO">
+
+							<Nome>God of aaawar</Nome>
+							<Prezzo>79,99</Prezzo>
+							<Descrizione>Gioco bellissimo 	
+							</Descrizione>
+						
+							<IMG>
+								<Percorso>http://localhost/php_program/GameOfHistory/IMG_FILE/</Percorso>
+								<Nome_IMG>bowling-alley-with-neon-lights</Nome_IMG>
+								<Estensione>.jpg</Estensione>
+							</IMG>	
+						
+				</ARTICOLO>
+
+<ARTICOLO ART_ID="ART003" Categoria="QUATTRO"><Nome>God of war</Nome><Prezzo>79,99</Prezzo><Descrizione>Gioco bellissimo</Descrizione></ARTICOLO><IMG><Percorso>http://localhost/php_program/GameOfHistory/IMG_FILE/</Percorso><Nome_IMG>bowling-alley-with-neon-lights</Nome_IMG><Estensione>.jpg</Estensione></IMG></RECORD_ARTICOLO>

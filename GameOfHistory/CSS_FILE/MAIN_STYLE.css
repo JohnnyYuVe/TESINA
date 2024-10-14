@@ -1,14 +1,20 @@
-body {
+
+ body {
       margin:0;
       background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/bowling-alley-with-neon-lights.jpg);
       background-repeat:no-repeat;
       background-size:cover;     
+}
 }
 
 hr{
     border: 10px solid #8A2BE2;
 }
 
+p{
+    color: red;
+    font-size: 30px;
+}
 .Font_For_Text{
               font-family: "New Amsterdam", sans-serif;
               font-weight: 400;
@@ -95,7 +101,7 @@ hr{
             height: auto;       
             
             display: inline-block;
-          
+            
             padding: 5% 5%;
 
 }
@@ -145,10 +151,16 @@ hr{
                height: 300px;
 
 }
+.text{
+  background-color: white;
+}
 
 .articolo p{
-            text-align:left ;
+            text-align: left;
+             word-wrap: break-word;           
 }
+
+
 
 .ScorriPagina{
             text-align: center;
@@ -202,3 +214,4 @@ hr{
 .Box_contact   img{
                     width:30px ;
 }
+   

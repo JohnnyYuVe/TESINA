@@ -12,20 +12,20 @@ Idea di implementazione delle varie pagine html/php:
 
 -Questa pagina fungerà semplicemente da "ingresso" per la vera pagina.
 -Questa pagina avrà uno sfondo e un pulsante gigante al centro con la scritta "SHOP NOW"
--Al click del punsante l'utente verrà reidirizzato alla pagina "HOME.php".
+-Al click del pulsante l'utente verrà reindirizzato alla pagina "HOME.php".
 
 
 2)HOME.php
 
-- Verrano esposti i videogiochi che verrannò venduti, in colonne da due con un massimo di 5 righe per pagina.
+- Verranno esposti i videogiochi che verranno venduti, in colonne da due con un massimo di 5 righe per pagina.
 - ci sarà una barra principale sulla parte più alta della pagina che reindirizzerà l'utente nelle varie sezioni della pagina.
-- la pagina avrà un bakground sfocato.
+- la pagina avrà un bakground.
 - l'utente(registrato) potrà aggiungere l'articolo dentro il suo carrello(icon carrello) oppure aggiungerlo tra i suoi preferiti(icon cuore)
-- l'anagrafica dell'articolo avrà (Immagine,Nome,prezzo,descrizione,breve).
-- al click dell'img verrà reidirizzato su un'altra pagina nella quale avrà più dettagli dell'articolo.
+- l'anagrafica dell'articolo avrà (Immagine, Nome, prezzo e una descrizione breve).
+- al click dell'img verrà reindirizzato su un'altra pagina nella quale avrà più dettagli dell'articolo.
 -
 
-3)LOG-IN-php
+3)LOG-IN.php
 
 -Scritta grossa "LOG IN" sulla parte alta, centrata della pagina(possibilmente con un font carino).
 -classica pagina da log in con i vari input box al centro della pagina.
@@ -34,7 +34,7 @@ Idea di implementazione delle varie pagine html/php:
 4)LOG-OUT-php
 
 -Semplice pagina che fa il dump delle informazioni dell'utente.
--viene reidirizzato al "INDEX_PAGE.php"
+-viene ridirizzato oppure tramite bottone si torna alla "HOME.php"
 
 5)SIGN-IN.php
 
