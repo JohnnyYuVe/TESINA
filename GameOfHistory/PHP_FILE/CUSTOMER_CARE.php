@@ -1,9 +1,15 @@
 <?php
 //FILE QUASI COMPLETATO MANCA IL REINDIRIZZAMENTO ALLA PAGINA PER EDITARE ALCUNI DATI DEL PROPRIO PROFILO.
-      ini_set('display_errors', 1);
-      session_start();
-      error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  session_start();
+  error_reporting(E_ALL);
 
+
+  if(!isset($_SESSION["T_ID"]) ){
+     $_SESSION['HIDE']=0;
+  }else{
+   $_SESSION['HIDE']=1;
+  }
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -24,8 +30,60 @@
 
 
 <body>
-   
-</body>
+
+     <div class="Container_section">
+      <?php  
+          if($_SESSION["HIDE"]==1){
+        ?>
+        <div Class="navigation_bar" id="nav_hide">
+        <?php
+        }else{
+        ?>
+        <div Class="navigation_bar1" id="nav_hide">
+        <?php  
+        } 
+        ?>   
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='MAIN.php' "> 
+          <span class="material-symbols-outlined">home</span>home  
+        </button>
+
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='GAMES.php' ">
+        <span class="material-symbols-outlined">sports_esports</span>giochi                                 
+        </button>
+        <?php  
+          if($_SESSION["HIDE"]==1){
+        ?>
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CARRELLO.php' "> 
+          <span class="material-symbols-outlined">shopping_cart</span>cart   
+        </button>
+
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='LOG-OUT.php' "> 
+          <span class="material-symbols-outlined">logout</span>logout   
+        </button>
+
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='ACCOUNT.php' "> 
+          <span class="material-symbols-outlined">account_circle</span>account    
+        </button>
+        <?php
+        }else{
+        ?>
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='LOG-IN.php' "> 
+          <span class="material-symbols-outlined">login</span> login 
+        </button>
+         <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='SIGN-IN.php' "> 
+          <span class="material-symbols-outlined">login</span> registrati 
+        </button>
+
+         <?php  
+        } 
+        ?>  
+                   
+        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
+          <span class="material-symbols-outlined">support_agent</span>support      
+        </button>
+
+      </div>    
+    </div>
 
 
   

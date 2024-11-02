@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE RECORD_UTENTE SYSTEM "http://localhost/php_program/GameOfHistory/XML%20_FILE/DTD_SCHEMA/UTENTE_STRUTTURA.dtd">
 <RECORD_UTENTE>
-
-		<Utente Privieggio="ADMIN">
+	<Utente Privieggio="ADMIN">
 				
 				<INFO_PERSONA ID_Persona="Uno1">
 							<Nome>a</Nome>
@@ -51,20 +50,6 @@
 				<Punti_History>0</Punti_History>
 				<Membership>BRONZE</Membership>
 
-		</Utente>	
+		</Utente>
 
-<Utente Privieggio="CLIENTE">
-<INFO_PERSONA ID_Persona="CLI3">
-	<Nome>123</Nome><Cognome>123</Cognome><Eta>231</Eta><Email>123</Email><Password>dsaf</Password><Sesso>Maschio</Sesso>
-</INFO_PERSONA>
-<Data_Registrazione>09/10/2024</Data_Registrazione><Punti_History>0</Punti_History><Membership>BRONZE</Membership>
-</Utente>
-
-
-
-
-
-
-
-
-</RECORD_UTENTE>
+</RECORD_UTENTE>	

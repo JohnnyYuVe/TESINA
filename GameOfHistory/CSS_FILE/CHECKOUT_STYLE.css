@@ -1,0 +1,159 @@
+body{                 
+ background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/background1.jpg");
+ background-repeat:no-repeat;
+ background-size:cover;       
+}
+
+p{
+ color:red;
+}
+
+h1{
+ color:red;
+}
+
+.navigation_bar {
+ overflow: hidden;
+ background-color: /*#8A2BE2*/none ;
+ position: fixed ;
+ text-align: center;
+ left: 5%;
+ top: 5%;
+ border-radius: 100px;
+ padding: 10px 25px;
+ z-index: 1;
+}
+.navigation_bar1{
+  overflow: hidden;
+  background-color: /*#8A2BE2*/none ;
+  position: fixed ;
+  text-align: center;
+  left: 18%;
+  top: 0%;
+  border-radius: 100px;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+.Button_Menu_Nav{
+ padding: 30px 90px;
+ border: none;
+ border-radius: 30px;
+ box-shadow: 5px 10px 0px #562087;
+ background-color: #8A2BE2;
+ border-color:black;
+ border-style: solid;
+ color: white;
+ font-size: 15px; 
+}
+
+.Button_Menu_Nav:hover {
+ background-color: #3e8e41
+}
+
+.Button_Menu_Nav:active {
+ background-color: #3e8e41;
+ box-shadow: 0 5px #666;
+ transform: translateY(10px);
+}
+.Font_For_Text{
+ font-family: "New Amsterdam", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+}
+
+.Container_Infomazioni{
+ margin-top: 5%;
+ background-color: #562087;
+ margin-left:5%;
+ width:90%;
+
+  border-radius: 30px;
+ border-color: white;
+ border-style: solid;  
+ 
+}
+
+
+.Container_Indirizzo{
+ background-color:#8A2BE2;
+}
+
+
+.Container_Metodo_pagamento{
+ background-color:#8A2BE2;
+}
+
+
+.Container_usa_discont{
+ background-color:#8A2BE2;
+}
+
+.Container_DIM{
+ width:1200px;
+ height: 300px;
+ margin-left: 15%;
+ border-radius: 30px;
+ border-color: white;
+ border-style: solid;  
+ 
+ padding-left: 30px; 
+}
+
+.Testo_align{
+ text-align: center;
+}
+
+.Dim_testo{
+ font-size: 40px; 
+}
+
+.Dim_testo1{
+ font-size: 30px; 
+}
+
+.Dim_testo2{
+ font-size: 34px; 
+}
+
+.text_color{
+ color: WHITE;
+}
+.BUTTON_Conteiner{
+                  position: relative;
+                  left: 2%;
+}
+
+.BUTTON_PAGA{ 
+    width: 48%;
+    height: 60px;
+    font-size: 30px;
+    border-color:NONE;
+    border-radius: 15px;
+    box-shadow: 15px 15px 1px #562087;
+
+}
+.BUTTON_Conteiner{
+    position: relative;
+    left: 2%;
+    background-color:;
+}
+.BUTTON_PAGA:hover  {
+    background-color: #3e8e41
+}
+
+.BUTTON_PAGA:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+}
+
+.Buttons_Conteiner_form{
+    height: 200px;
+    margin-top: 30px;
+}
+.BOX_IN_DISC{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}

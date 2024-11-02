@@ -1,18 +1,15 @@
 body{                 
-          background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/view-3d-arcade-game-box.jpg");
-          background-repeat:no-repeat;
-          background-size:cover;       
-}
-p{
-  color:  red;
+  background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/futuristic-casino-architecture.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;       
 }
 
 .Font_For_Text{
-              font-family: "New Amsterdam", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              padding: none;
-                margin: none;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: none;
+  margin: none;
 }
 
 .material-symbols-outlined {
@@ -24,110 +21,136 @@ p{
 }
 
 .INFO_Conteiner{
-                width: 70%;                
-                height: 80%;
-
-
-                background-color:  #8A2BE2;
-                position: relative;
-
-                display: flex;
-                flex-wrap: wrap;
-                
-                
-                  border: 5px solid;
-                  border-radius: 15px;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  text-align: center;
-
+  margin-top: 30px;
+  width: 70%;                
+  height: 80%;
+  background-color:  #8A2BE2;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .INFO_Conteiner span{
-                    color: black;
-                    font-size: 40px;
+  color: black;
+  font-size: 40px;
 }
 
 .INFO_Conteiner p{
-                  color: white;
-                  position: relative;
-                  font-size: 40px;
-
+  color: white;
+  position: relative;
+  font-size: 40px;
 }
 
 .INFO1{
-      position: relative;
-      width: 45%;
-      text-align: left;
-      padding: 30px 30px ;
+  position: relative;
+  width: 45%;
+  text-align: left;
+  padding: 30px 30px ;
 }
 
 .INFO2{
-      position: relative;
-      width: 45%;
-      text-align: left;
-      padding: 30px 30px ;
+  position: relative;
+  width: 45%;
+  text-align: left;
+  padding: 30px 30px ;
 }
 
 .INFO3{
-      position: relative;
-      width: 100%;
-      text-align: left;
-      padding: 30px 30px ;
-      text-align: center;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 30px 30px ;
+  text-align: center;
 }
 
 .BackGround_TEXT2{
-                    background: none;
-                    position: relative;
-
+  background: none;
+  position: relative;
                     
 }
 
 .BackGround_TEXT2 p{
-                      text-align: center;
-                      color: white;
-                      font-size: 15px;
-
+  text-align: center;
+  color: white;
+  font-size: 15px;
 }
 
 
 .Big_Button{
-              background-color: #8A2BE2;
-              padding: 60px 128px;
-              border: none;
-              border-radius: 30px;
-              box-shadow: 15px 15px 5px BLACK;
-              border-color:black;
-              border:solid;
-              
-
-
-
-              /* 
-              box-shadow Spiegazione:
-              -i primi due valori specificano quanto deve essere grande l'ombra.
-              -il terzo parametro specifica quanto intenso deve essere il blur. 
-              -l'ultimo campo specifica il colore.
-              border-radius Spiegazione:
-              - Specifico la smussatura dei bordi.
-              */
+  background-color: #8A2BE2;
+  padding: 60px 128px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 15px 15px 5px BLACK;
+  border-color:black;
+  border:solid;
 }
 
 .Big_Button:hover {
-                    background-color: #3e8e41
-                  }
+  background-color: #3e8e41
+}
 
 .Big_Button:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #666;
-                  transform: translateY(40px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(40px);
 }
 
 .Big_Button span{
-              font-size:60px;                                        
-              color: white;
+  font-size:60px;                                        
+  color: white;
+}
 
+.navigation_bar {
+  overflow: hidden;
+  background-color: /*#8A2BE2*/none ;
+  position: fixed ;
+  text-align: center;
+  left: 10%;
+  top: 0%;
+  border-radius: 100px;
+  padding: 10px 25px;
+  z-index: 1;
+}
+.navigation_bar1{
+  overflow: hidden;
+  background-color: /*#8A2BE2*/none ;
+  position: fixed ;
+  text-align: center;
+  left: 18%;
+  top: 0%;
+  border-radius: 100px;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+.Button_Menu_Nav{
+  padding: 30px 90px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 5px 10px 0px #562087;
+  background-color: #8A2BE2;
+  border-color:black;
+  border-style: solid;
+  color: white;
+  font-size: 15px; 
+
+}
+
+.Button_Menu_Nav:hover {
+  background-color: #3e8e41;
+  transform: scale(1.2);
+}
+
+.Button_Menu_Nav:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
 }

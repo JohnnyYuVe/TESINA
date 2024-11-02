@@ -1,25 +1,26 @@
 body {
-      margin:0;
-      background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/futuristic-casino-architecture.jpg);
-      background-repeat:no-repeat;
-      background-size:cover;
-      padding: none;
-      margin: none;     
+  margin:0;
+  background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/futuristic-casino-architecture.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding: none;
+  margin: none;     
 }
+
 h1{
   text-align: center;
 }
+
 p{
   color: red;
   font-size: 20px;
 }
 
 .Font_For_Text{
-              font-family: "New Amsterdam", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              padding: none;
-                margin: none;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: none;
 }
 
 .material-symbols-outlined {
@@ -31,143 +32,137 @@ p{
 }
 
 .MAIN_Conteiner{
-             
-                width: 70%;                
-                height: auto;
-
-
-                background-color:  #8A2BE2;
-                position: relative;
-
-                display: flex;
-                flex-wrap: wrap;
-                
-                
-                  border: 5px solid;
-                  border-radius: 15px;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  
+  width: 70%;                
+  height: auto;
+  background-color:  #8A2BE2;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.BOX_Destro{
-             
+.BOX_Destro {
+  height: auto;
+  width: 750px;
 }
-
 .BOX_Destro img{
-               
-                height: 880px;
-                width: 750px;
+  height: 100%;
+  width: 750px;
 }
 
 .BOX_Sinistro{         
-                  width: 42%;
-                  position: relative;
-                 
+  width: 42%;
+  position: relative;
 }
 
 .BOX_Sinistro h1{
-                      text-align: center;
-                      font-size: 50px;
-}
-
-
-.FORM_Conteiner{
-                
+  text-align: center;
+  font-size: 50px;
 }
 
 .FORM_Conteiner input[type=text]{
-                        height: 40px ;
-                        width: 300px;
-                        display: block;
-                        margin-bottom: 30px;
-                        left: 25%;
-                        position: relative;  
-                        width: 42%;          
-                       margin-top: 10px;
-                        text-align: center;
+  height: 40px ;
+  width: 300px;
+  display: block;
+  margin-bottom: 30px;
+  left: 25%;
+  position: relative;  
+  margin-top: 10px;
+  text-align: center;
 }
 
 .FORM_Conteiner input[type=number]{
-                        height: 40px ;
-                        width: 300px;
-                        display: block;
-                        margin-bottom: 30px;
-                        left: 25%;
-                        position: relative;  
-                        width: 42%;          
-                        margin-top: 10px;
-                        text-align: center; 
+  height: 30px ;
+  width: 300px;
+  display: block;
+  margin-bottom: 30px;
+  left: 25%;
+  position: relative;  
+  width: 42%;          
+  margin-top: 10px;
+  text-align: center; 
 }
 
 .FORM_Conteiner input[type=radio]{
-                            left: 30%;
-                            position: relative;
-                             margin-top: 10px;
-                              margin-bottom:30px;
-                             text-align: center;
-
-
+  left: 30%;
+  position: relative;
+  margin-top: 0;
+  margin-bottom:30px;
+  text-align: center;
 }
 
 .RR{
-                            left: 30%;
-                            position: relative;
+  left: 30%;
+  position: relative;
 }
 
 .FORM_Conteiner  label{
-                         left: 25%;
-                        position: relative;
-                        display: block;
-                        
-                        font-size: 30px;
-
-
+  left: 25%;
+  position: relative;
+  display: block;
+  font-size: 25px;
 }
 
-
 .BUTTON_Conteiner{
-                  position: relative;
-                  left: 3%;
+  position: relative;
+  left: 3%;
 }
 
 .BUTTON_REGISTRATI{ 
-              width: 48%;
-              height: 60px;
-              font-size: 30px;
-              border-color:NONE;
-              border-radius: 15px;
-              box-shadow: 15px 15px 1px #562087;
-
+  width: 48%;
+  height: 60px;
+  font-size: 30px;
+  border-color:NONE;
+  border-radius: 15px;
+  box-shadow: 15px 15px 1px #562087;
 }
 
 .BUTTON_REGISTRATI:hover  {
-                    background-color: #3e8e41
-                  }
+  background-color: #3e8e41;
+  transform: scale(1.2);
+  }
 
 .BUTTON_REGISTRATI:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #666;
-                  transform: translateY(10px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
 }
 
 .BUTTON_ANNULLA{
-              width: 48%;
-              height: 60px;
-              font-size: 30px;
-              border-color:NONE;
-              border-radius: 15px;
-              box-shadow: 15px 15px 1px #562087;
+  width: 48%;
+  height: 60px;
+  font-size: 30px;
+  border-color:NONE;
+  border-radius: 15px;
+  box-shadow: 15px 15px 1px #562087;
 }
 
 .BUTTON_ANNULLA:hover  {
-                    background-color: #3e8e41
-                  }
+  background-color: #3e8e41;
+  transform: scale(1.2);
+}
 
 .BUTTON_ANNULLA:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #666;
-                  transform: translateY(10px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+
+.Button_Art{
+ border-radius: 10px;
+ width: 70px;
+ height: 70px;
+}
+
+.COUNTAINER_HOME{
+  width: 500px;
+  justify-content: right;
+  display: flex;
+  flex-wrap: wrap;
+  
 }

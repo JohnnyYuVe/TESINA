@@ -1,17 +1,19 @@
-      body{                 
-          background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/view-3d-arcade-game-box.jpg");
-          background-repeat:no-repeat;
-          background-size:cover;       
-      }
+body{                 
+  background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/view-3d-arcade-game-box.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;       
+}
+
 p{
   color:  red;
 }
+
 .Font_For_Text{
-              font-family: "New Amsterdam", sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              padding: none;
-                margin: none;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: none;
+  margin: none;
 }
 
 .material-symbols-outlined {
@@ -23,112 +25,111 @@ p{
 }
 
 .MAIN_Conteiner{
-               
-               
-                width: 70%;                
-                height: auto;
-
-
-                background-color:  #8A2BE2;
-                position: relative;
-
-                display: flex;
-                flex-wrap: wrap;
-                
-                
-                  border: 5px solid;
-                  border-radius: 15px;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  
+  width: 70%;                
+  height: auto;
+  background-color:  #8A2BE2;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-
-
-
 
 .LOG_IN_Conteiner{
-                 
-                  width: 42%;
-                  position: relative;
-                  margin-top: 30;
+  width: 42%;
+  position: relative;
+  margin-top: 30;
 }
+
 .LOG_IN_Conteiner h1{
-                      text-align: center;
-                      font-size: 60px;
+  text-align: center;
+  font-size: 60px;
 }
 
 .IMG_Conteiner {
-                background-color: blue;
-
+  background-color: blue;
 } 
+
 .IMG_Conteiner img{
-                background-color: blue;
-                height: 800px;
-                width: 750px;
-
+  background-color: blue;
+  height: 800px;
+  width: 750px;
 } 
-.FORM_Conteiner{
 
-}
 .FORM_Conteiner input { 
-                        height: 40px ;
-                        width: 350px;
-                        display: block;
-                        margin-bottom: 30px;
-                        left: 25%;
-                        position: relative;                    
+  height: 40px ;
+  width: 350px;
+  display: block;
+  margin-bottom: 30px;
+  left: 25%;
+  position: relative;                    
 }
 
 .FORM_Conteiner  label{
-                         left: 25%;
-                        position: relative;
-                        font-size: 30px;
-
-                        }
-.BUTTON_Conteiner{
-                  position: relative;
-                  left: 3%;
+  left: 25%;
+  position: relative;
+  font-size: 30px;
 }
 
+.BUTTON_Conteiner{
+  position: relative;
+  left: 3%;
+}
 
 .BUTTON_LOGIN{ 
-              width: 48%;
-              height: 60px;
-              font-size: 30px;
-              border-color:NONE;
-              border-radius: 15px;
-              box-shadow: 15px 15px 1px #562087;
-
+  width: 48%;
+  height: 60px;
+  font-size: 30px;
+  border-color:NONE;
+  border-radius: 15px;
+  box-shadow: 15px 15px 1px #562087;
 }
 
 .BUTTON_LOGIN:hover  {
-                    background-color: #3e8e41
-                  }
+  background-color: #3e8e41;
+  transform: scale(1.2);
+}
 
 .BUTTON_LOGIN:active .BUTTON_RESET:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #666;
-                  transform: translateY(10px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
 }
 
 .BUTTON_RESET{
-              width: 48%;
-              height: 60px;
-              font-size: 30px;
-              border-color:NONE;
-              border-radius: 15px;
-              box-shadow: 15px 15px 1px #562087;
+  width: 48%;
+  height: 60px;
+  font-size: 30px;
+  border-color:NONE;
+  border-radius: 15px;
+  box-shadow: 15px 15px 1px #562087;
 }
 
 .BUTTON_RESET:hover  {
-                    background-color: #3e8e41
-                  }
+  background-color: #3e8e41;
+  transform: scale(1.2);
+}
 
 .BUTTON_RESET:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #666;
-                  transform: translateY(10px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+
+.Button_Art{
+ border-radius: 10px;
+ width: 70px;
+ height: 70px;
+}
+
+.COUNTAINER_HOME{
+  width: 700px;
+  justify-content: right;
+  display: flex;
+  flex-wrap: wrap;
+  
 }

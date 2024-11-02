@@ -15,7 +15,7 @@ Idea di implementazione delle varie pagine html/php:
 -Al click del pulsante l'utente verrà reindirizzato alla pagina "HOME.php".
 
 
-2)HOME.php
+2)MAIN.php
 
 - Verranno esposti i videogiochi che verranno venduti, in colonne da due con un massimo di 5 righe per pagina.
 - ci sarà una barra principale sulla parte più alta della pagina che reindirizzerà l'utente nelle varie sezioni della pagina.
@@ -23,7 +23,7 @@ Idea di implementazione delle varie pagine html/php:
 - l'utente(registrato) potrà aggiungere l'articolo dentro il suo carrello(icon carrello) oppure aggiungerlo tra i suoi preferiti(icon cuore)
 - l'anagrafica dell'articolo avrà (Immagine, Nome, prezzo e una descrizione breve).
 - al click dell'img verrà reindirizzato su un'altra pagina nella quale avrà più dettagli dell'articolo.
--
+
 
 3)LOG-IN.php
 
@@ -44,13 +44,29 @@ Idea di implementazione delle varie pagine html/php:
 
 - pagina dedicata per l'utente nella quale potrà mandare una email allo staff per ricevere supporto.
 
-8)CARRELLO.php
+8)CARRELLO.php	
 -l'utente qui vedrà sia gli articoli messi nel carrello e sia quelli messi tra i preferiti,l'utente potrà spostare un articolo dal carrello a quello dei preferiti e viceversa.
 -l'utente quando vorrà pagare verrà reidirizzato alla pagina "CHECKOUT.php"
 
 8)CHECKOUT.php
 -l'utente qui effettuerà il pagamento
-- potrà decidere il metodo di pagamento.
+- potrà decidere il metodo di pagamento.// PER QUESTIONI DI SICUREZZA 
 - se sfruttare qualche tipologia di sconto(reputazione, crediti, codici sconto non commulabile).
 - decidere se ritirare in negozio, o farselo spedire.
-- 
+
+
+GENERE GIOCHI:
+
+-AZIONE
+-AVVENTURA
+-RACING
+-SHOOTERS
+-SIMULATION
+-SPORT
+-STRATEGIA
+-ROLE PLAYING
+
+PUNTI HISTORY:
+
+-in base alla spesa totale verranno generati dei punti utilizzabili per il prossimo acquisto: 
+-per ogni 10 euro di spesa vengono generati 4pt history-

@@ -1,0 +1,281 @@
+body{                 
+    background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/rest.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;       
+}
+
+p{
+    color:red;
+}
+
+.navigation_bar {
+    overflow: hidden;
+    background-color: /*#8A2BE2*/none ;
+    position: fixed ;
+    text-align: center;
+    left: 10%;
+    top: 5%;
+    border-radius: 100px;
+    padding: 10px 25px;
+     z-index: 1;
+}
+.navigation_bar1{
+  overflow: hidden;
+  background-color: /*#8A2BE2*/none ;
+  position: fixed ;
+  text-align: center;
+  left: 5%;
+  top: 0%;
+  border-radius: 100px;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+.Button_Menu_Nav{
+    padding: 30px 90px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 5px 10px 0px #562087;
+    background-color: #8A2BE2;
+    border-color:black;
+    border-style: solid;
+    color: white;
+    font-size: 15px; 
+}
+
+.Button_Menu_Nav:hover {
+    background-color: #3e8e41;
+    transform: scale(1.2);
+}
+
+.Button_Menu_Nav:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+}
+
+.Radio_BOX_Custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Radio_BOX_Custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.Radio_BOX_Custom:hover input ~ .checkmark {
+    background-color: #3e8e41;
+}
+
+.Radio_BOX_Custom input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.Radio_BOX_Custom input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.Radio_BOX_Custom .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.blocco_CONFERMA{        
+    height: 100px;
+    width: 100%;  
+}
+
+.Section_cart{
+    background: #562087;
+    padding-top: 20px ;
+    padding-bottom: 0px;
+    margin-top: 80px;
+    
+    border-radius: 30px;
+    border-color: white;
+    border-style: solid;
+}
+
+.Section_cart h1{ 
+    text-align: center;
+    color:  white;
+    font-size: 55px;
+ }
+
+ .BUTTON_PAGA{ 
+    width: 48%;
+    height: 60px;
+    font-size: 30px;
+    border-color:NONE;
+    border-radius: 15px;
+    box-shadow: 15px 15px 1px #562087;
+}
+
+.BUTTON_Conteiner{
+    position: relative;
+    left: 2%;
+}
+.BUTTON_PAGA:hover  {
+    background-color: #3e8e41
+}
+
+.BUTTON_PAGA:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+}
+
+.BUTTON_ANNULLA{
+    width: 48%;
+    height: 60px;
+    font-size: 30px;
+    border-color:NONE;
+    border-radius: 15px;
+    box-shadow: 15px 15px 1px #562087;
+}
+
+.BUTTON_ANNULLA:hover {
+    background-color: #3e8e41
+}
+
+.BUTTON_ANNULLA:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+}
+
+.Section_Preferiti{
+    background: #562087;
+    padding-top: 20px ;
+    padding-bottom: 20px;
+    margin:  10px;
+    border-radius: 30px;
+    border-color: white;
+    border-style: solid;
+}
+
+.Section_Preferiti h1{
+    text-align: center;
+    color:  white;
+    font-size: 55px;   
+}
+
+.align_Pref_art{
+    display: flex;
+    flex-wrap: wrap;  
+
+}
+.articolo_PREF{
+    background-color: #8A2BE2;    
+    text-align: center;
+    padding: 25px 10px;
+    width: 540px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-inline: 10px;
+    margin-left:30px;
+    border-color: black;
+    border-style: solid;
+}
+
+.articolo_PREF img{              
+    height: 300px;
+    width: 300px;
+}
+
+.articolo_PREF p{
+    text-align: center;
+    word-wrap: break-word;           
+}
+
+.Articolo_CART{
+    width:80%;
+    height:33%;
+    background: #8A2BE2 ;
+    padding-bottom:5px;
+    padding-top:  5px;
+    padding-left: 10px ;
+    margin-left:  150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+}
+ 
+.Articolo_CART img {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    padding: 10px 10px;
+    padding-right:30px;
+}
+
+.align{
+    display:  flex;
+    text-align:left;
+}
+
+.text_Art{
+    text-align:right;
+} 
+
+.Font_For_Text{
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Font_For_Name{
+    font-size: 35px;
+}
+
+.Font_For_Prezzo{
+    font-size: 20px;
+}
+
+.text_color{
+    color: white;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24
+}
