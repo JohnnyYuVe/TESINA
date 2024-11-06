@@ -127,9 +127,20 @@ p{
 }
 
 .COUNTAINER_HOME{
-  width: 700px;
+  width: 500px;
   justify-content: right;
   display: flex;
   flex-wrap: wrap;
   
+}
+
+.Button_Art{
+ border-radius: 10px;
+ width: 70px;
+ height: 70px;
+}
+
+.Button_Art:hover {
+  background-color: #3e8e41;
+   transform: scale(1.2);
 }

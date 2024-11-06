@@ -1,0 +1,242 @@
+      body{
+    margin:0;
+    background-image: url(http://localhost/php_program/GameOfHistory/IMG_FILE/bowling-alley-with-neon-lights.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;     
+  }
+
+  hr{
+    border: 10px solid #8A2BE2;
+  }
+
+  p{
+    color: white;
+    font-size: 30px;
+  }
+
+  .Font_For_Text{
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+  .navigation_bar {
+    overflow: hidden;
+    background-color: /*#8A2BE2*/none ;
+    position: fixed ;
+    text-align: center;
+    left: 30%;
+    top: 0%;
+    border-radius: 100px;
+    padding: 10px 25px;
+    z-index: 1;
+    }
+
+
+  .Dim_text{
+    font-size: 30px;
+  }  
+
+  .Button_Menu_Nav{
+    padding: 30px 90px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 5px 10px 0px #562087;
+    background-color: #8A2BE2;
+    border-color:black;
+    border-style: solid;
+    color: white;
+    font-size: 15px; 
+
+  }
+
+  .Button_Menu_Nav:hover {
+    background-color: #3e8e41;
+    transform: scale(1.2);
+  }
+
+  .Button_Menu_Nav:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+
+  .BOX_FILTRI{
+    margin-left: 10%;
+    width: 90%;
+    height: 200px;
+    margin-top: 200px;
+
+  }
+
+  .Main_Container_Item{
+    width: 100%;
+    height: auto;
+
+  }
+
+  .Box_container{
+    width:90%;
+    height: auto;       
+    display: inline-block;
+    padding: 0px 5%;
+  }
+
+  .Button_Container{
+    text-align: right;
+    padding: 10px 10px;
+  }
+
+  .Disposizione{
+    margin: none;
+    padding-block: 5px;            
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Button_Art{
+    border-radius: 15%;
+  }
+
+  .Button_Art:hover {
+    background-color: #3e8e41;
+     transform: scale(1.2);
+  }
+
+  .Button_Art:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+  }
+
+  .articolo{
+    background-color: #8A2BE2;    
+    text-align: center;
+    padding: 25px 25px;
+    width: 450px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-inline: 10px;
+    border-color: black;
+    border-style: solid;  
+  }
+
+  .articolo1{
+    background-color: RED;    
+    text-align: center;
+    padding: 25px 25px;
+    width: 450px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-inline: 10px;
+    border-color: black;
+    border-style: solid;  
+  }
+   .articolo1  img{              
+    height: 300px;
+    width: 350px;
+  }
+
+ .articolo1 p{
+    text-align: left;
+    word-wrap: break-word;           
+  }
+  .articolo  img{              
+    height: 300px;
+    width: 350px;
+  }
+
+  .text{
+    background-color: white;
+  }
+
+  .articolo p{
+    text-align: left;
+    word-wrap: break-word;           
+  }
+
+  .ScorriPagina{
+    text-align: center;
+    font-size: 30px;
+    padding-block: 30px;
+    width: 100%;
+
+    z-index: 1;
+  }
+
+  .ScorriPagina span{
+    font-size: 40px;
+  }
+
+  .ScorriPagina a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+
+  .ScorriPagina a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+  .ScorriPagina a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  .Container_info{
+    background-color: #562087;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: flex;
+  }
+
+  .CONTAINER_FILTRO{
+      margin: none;
+      padding-block: 10px;            
+      display: flex;
+      flex-wrap: wrap;
+       justify-content: center;
+  }
+
+  .FILTRO_GENERE{
+  }
+
+  .ORDINA_PER{
+  }
+
+  .CONTAINER_BUTTON{
+      margin-left: 10px;
+
+
+  }
+  .BOTTONE_FILTRO{
+      border-radius: 12%;
+  }
+  .BOTTONE_FILTRO:hover{
+      background-color: #3e8e41;
+      transform: scale(1.2);
+  }
+
+  .custom{
+      border-radius: 30px;
+      width:220px;
+      height: 60px;
+      background: #8A2BE2;
+      color: black;
+      font-size: 25px;
+      text-align: center;
+      
+  }

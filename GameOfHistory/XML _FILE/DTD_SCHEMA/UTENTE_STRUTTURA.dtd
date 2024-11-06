@@ -23,5 +23,4 @@
 <!ELEMENT Data_Registrazione (#PCDATA)>
 <!ELEMENT Punti_History (#PCDATA)>
 <!ELEMENT Membership (#PCDATA)>
-<!--<!ATTLIST Membership (BRONZE | IRON | SILVER | GOLD | EMERALD | PLATINUM | DIAMOND | MYTHRIL) "BRONZE" >  -->
 

@@ -33,7 +33,7 @@ p{
   background-color: /*#8A2BE2*/none ;
   position: fixed ;
   text-align: center;
-  left: 10%;
+   left: 17%;
   top: 0%;
   border-radius: 100px;
   padding: 10px 25px;
@@ -44,7 +44,7 @@ p{
   background-color: /*#8A2BE2*/none ;
   position: fixed ;
   text-align: center;
-  left: 18%;
+  left: 25%;
   top: 0%;
   border-radius: 100px;
   padding: 10px 25px;
@@ -231,14 +231,3 @@ p{
     
 }
 
-.navigation_bar1{
-  overflow: hidden;
-  background-color: /*#8A2BE2*/none ;
-  position: fixed ;
-  text-align: center;
-  left: 18%;
-  top: 0%;
-  border-radius: 100px;
-  padding: 10px 25px;
-  z-index: 1;
-}

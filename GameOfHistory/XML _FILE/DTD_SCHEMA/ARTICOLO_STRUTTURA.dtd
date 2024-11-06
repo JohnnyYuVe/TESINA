@@ -8,6 +8,8 @@
 
 <!ATTLIST ARTICOLO           
           Categoria CDATA #REQUIRED>
+<!ATTLIST ARTICOLO           
+          HIDE CDATA #REQUIRED>          
 
 <!ELEMENT Nome (#PCDATA)>
 <!ELEMENT Prezzo (#PCDATA)>

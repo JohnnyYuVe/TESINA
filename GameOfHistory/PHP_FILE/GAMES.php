@@ -4,15 +4,15 @@
   session_start();
   error_reporting(E_ALL);
   require_once "funzioni.php";
- 
+   $DOC_PREF=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/PREFERITI.XML") or die("Error: Cannot create object");
+    $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.XML") or die("Error: Cannot create object");
+    
   if(isset($_POST["FAV"]) ){
     if( empty($_POST["ID_art"] ) || empty($_POST["Categoria_art"] ) || empty($_POST["Nome_art"] ) || empty($_POST["Prezzo"]) ){
       echo "<p>CONTENUTO POST VUOTO1</p>";             
     }else{
       if(!empty($_POST["ID_CLI"])){
                 
-        $DOC_PREF=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/PREFERITI.XML") or die("Error: Cannot create object");
-        $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.XML") or die("Error: Cannot create object");
         $Index_End_PREF=count($DOC_PREF);
         $Index_End_CART=count($DOC_CART);
         $RESULT_PREF=CheckItemInFAV($DOC_PREF,$Index_End_PREF,$_POST["ID_CLI"],$_POST["ID_art"]);
@@ -31,8 +31,7 @@
       echo "<p>CONTENUTO POST VUOTO 2</p>";  
     }else{
       if(!empty($_POST["ID_CLI"])){
-        $DOC_PREF=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/PREFERITI.XML") or die("Error: Cannot create object");
-        $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.XML") or die("Error: Cannot create object");
+        
         $Index_End_PREF=count($DOC_PREF);
         $Index_End_CART=count($DOC_CART);
         $RESULT_PREF=CheckItemInFAV($DOC_PREF,$Index_End_PREF,$_POST["ID_CLI"],$_POST["ID_art"]);
@@ -58,11 +57,11 @@
         }
 
          if(strlen($_POST["GENERE"])==0  &&  strlen($_POST["TIPOLOGIA_FILTRO"])!=0 ){
-          FILTRA_PER_GENERE($DOC_ART,$DOC_ART_SUPP,$_POST["GENERE"],$_POST["TIPOLOGIA_FILTRO"]); //ESTRAGGO SOLO UN TIPO DI GENERE
+          $F_FILE_Filtrato=FILTRA_PER_GENERE($DOC_ART,$DOC_ART_SUPP,$_POST["GENERE"],$_POST["TIPOLOGIA_FILTRO"]); //ESTRAGGO SOLO UN TIPO DI GENERE
           SORT_FILE($DOC_ART_SUPP,$_POST["TIPOLOGIA_FILTRO"]);
-            $_SESSION["ATTIVA_FILTRO"]=0;
+            $_SESSION["ATTIVA_FILTRO"]=1;
             $_SESSION['INIZIO']=0;
-            $ $_SESSION['FINE']=$F_FILE_Filtrato; 
+            $_SESSION['FINE']=$F_FILE_Filtrato; 
        }
 
         if(strlen($_POST["GENERE"])!=0  &&  strlen($_POST["TIPOLOGIA_FILTRO"])!=0 ){
@@ -71,6 +70,7 @@
             $_SESSION["ATTIVA_FILTRO"]=1;
             $_SESSION['INIZIO']=0;
             $_SESSION['FINE']=$F_FILE_Filtrato; 
+
        }
 
        
@@ -114,9 +114,9 @@
   }
 
   if(!isset($_SESSION["T_ID"]) ){
-     $_SESSION['HIDE']=0;
+     $_SESSION['HIDE']=0;//nascondi
   }else{
-   $_SESSION['HIDE']=1;
+   $_SESSION['HIDE']=1;// mostra
   }
 
 ?>
@@ -135,7 +135,7 @@
 
   <body>
 
-        <div class="Container_section">
+    <div class="Container_section">
       <?php  
           if($_SESSION["HIDE"]==1){
         ?>
@@ -182,10 +182,6 @@
         } 
         ?>  
                    
-        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
-          <span class="material-symbols-outlined">support_agent</span>support      
-        </button>
-
       </div>    
     </div>
     
@@ -215,8 +211,8 @@
                 <div class="ORDINA_PER">
                     <select name="TIPOLOGIA_FILTRO" class="custom Font_For_Text">
                         <optgroup label="ORDINA">
-                            <option value=""></option>
-                            <option value="CRESCENTE">PREZZO CRESCENTE</option>
+                            <option value=""></option>                         
+                             <option value="CRESCENTE">PREZZO CRESCENTE</option>
                             <option value="DECRESCENTE">PREZZO DECRESCENTE</option>
                          
                         </optgroup>
@@ -244,30 +240,34 @@
         $DOC_ART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/ARTICOLO1.xml") or die("Error: Cannot create object");
         $_SESSION["FINE_FILE"]=count($DOC_ART);
       }
-
-      
       
       if($_SESSION['INIZIO']==0){
        $visButton1="hidden";
-       if($_SESSION['INCR']>$_SESSION["FINE_FILE"]){
-          $_SESSION['INCR']=$_SESSION["FINE_FILE"];
-       }else{
-        $_SESSION['INCR']=10;
-       }
+        
+          if($_SESSION['INCR']>$_SESSION["FINE_FILE"]){
+            $_SESSION['INCR']=$_SESSION["FINE_FILE"];
+            echo"<p>a:".$_SESSION["FINE_FILE"]."</p>";
+          }
+           
        $_SESSION["INDEX_PAGE"]=0;//IN QUALE PAGINA CI TROVIAMO
        $_SESSION['INIZIO']=0; 
        $_SESSION['FINE']= $_SESSION['INCR'];
       }else{
         $visButton1=""; 
       }
+
+
       $INT_I=$_SESSION['INIZIO'];
-      $INT_F=$_SESSION['FINE'];     
+      $INT_F=$_SESSION['FINE']; 
+
+
       ?>
       <div class="Box_container">       
         <div class="Disposizione">
           <?php 
             for($INT_I; $INT_I<$INT_F; $INT_I++){
               $ARRAY_ART=Extract_Articolo_Info($DOC_ART, $INT_I);
+              if((int)$ARRAY_ART[9]==1){
           ?>
               <!--style="visibility: none; display: none;"-->
               <div class="articolo Font_For_Text">
@@ -275,9 +275,11 @@
                   echo'<form action="GAMES.php?id='.$ARRAY_ART[0].'"'.'method="POST" id='. $ARRAY_ART[0] .'>';
                 ?>
                 <img src='<?php echo  $ARRAY_ART[5]; ?>' alt="Foto articolo"> 
-                <p> 
+                <p>
+
                   Nome_articolo:  <?php echo $ARRAY_ART[2]; ?></br>
                   Prezzo: &#8364; <?php echo $ARRAY_ART[3]; ?></br>
+                  ID articolo:  <?php echo $ARRAY_ART[0]; ?></br>
                 </p >
                 <p class="red">
                   <?php 
@@ -306,6 +308,7 @@
                 ?>                    
               </div>
               <?php 
+              }
             }
             ?>                   
         </div>

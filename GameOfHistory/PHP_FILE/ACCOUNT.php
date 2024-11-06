@@ -75,10 +75,6 @@
         } 
         ?>  
                    
-        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
-          <span class="material-symbols-outlined">support_agent</span>support      
-        </button>
-
       </div>    
     </div>
 
@@ -103,8 +99,6 @@
             <span>Data iscrizione : </span> <?php echo $_SESSION['T_DATA_REGISTRAZIONE']; ?></br>    
             <span>Membership :      </span> <?php echo $_SESSION['T_MEMBERSHIP'];         ?></br>
             <span>Privileggio :     </span> <?php echo $_SESSION['T_PRIVILEGGIO'];        ?></br>
-            <span>TEST :            </span> <?php echo $_SESSION['T_NOME'];               ?></br>
-            <span>TEST :            </span> <?php echo $_SESSION['T_NOME'];               ?></br>
           </p>
         </div>
       <?php 
@@ -127,20 +121,12 @@
             <span>Data iscrizione : </span> <?php echo "N/A";?></br>    
             <span>Membership :      </span> <?php echo "N/A";?></br>
             <span>Privileggio :     </span> <?php echo "N/A";?></br>
-            <span>TEST :            </span> <?php echo "N/A";?></br>
-            <span>TEST :            </span> <?php echo "N/A";?></br>
           </p>
         </div>
       <?php 
         }  
       ?>
 
-      <div class="INFO3">
-        <div class="BackGround_Button">
-          <button type="button" class="Big_Button Font_For_Text" onclick="location.href='MAIN.php'">
-            <span>EDIT INFO</span> 
-          </button>
-        </div>                    
       </div>
     </div>
   </body>

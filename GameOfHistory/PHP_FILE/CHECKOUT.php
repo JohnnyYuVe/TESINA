@@ -4,23 +4,50 @@
     session_start();
     error_reporting(E_ALL);
     require_once "funzioni.php";
+    $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.xml") or die("Error: Cannot create object");
+    $DOC_USER=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.xml") or die("Error: Cannot create object");
+    $Index_End=count($DOC_CART);
+    $I_END_USER=count($DOC_USER);
+    $percorso=dirname($_SERVER['PHP_SELF']);
+    $Path1="Location: ". $percorso ."/MAIN.php";
 
     if(isset($_POST['PAGA']) ){
+        if(isset($_POST['PT_FEDELTA']) ){
+           for ($I=0; $I <$I_END_USER ; $I++) { 
+                 $ARR_USER=Extract_USER_Info($DOC_USER,$I);
+                 
+                 if(strcmp($_SESSION["T_ID"],$ARR_USER[1])==0){
+                    $PT_HISTORY=$ARR_USER[9];
+                    $PT_IN_EURO=((int)$PT_HISTORY*4)/10;
 
-        $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.xml") or die("Error: Cannot create object");
-        $DOC_USER=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.xml") or die("Error: Cannot create object");
-        $Index_End=count($DOC_CART);
+                    $sconto_CON_punti=(int)$_POST['SPESA']-$PT_IN_EURO;
 
+                    if($sconto_CON_punti<0){
+
+                        $PT_HISTORY=(($sconto_CON_punti*10)/4)*(-1);
+                        EDIT_PT_HISTORY_UTENTE($DOC_USER,"UTENTE",$PT_HISTORY,$I);
+                         $_SESSION['T_PUNTI']=$PT_HISTORY;
+                    }else{
+                         $_SESSION["RESTANTE"]=$sconto_CON_punti;
+                    }
+                 }
+
+            } 
+           
+        }
+      
         ADD_TO_STORICO($DOC_CART,$_SESSION['T_ID']);
-        echo"ok";
         ADD_PUNTI_FEDELTA($DOC_USER,$_SESSION['T_ID'] ,(int)$_POST['SPESA']);   
-
-        for($Index_Start=0;$Index_Start<$Index_End;$Index_Start++){
-
-           unset($DOC_CART->CARRELLO[intval($Index_Start)]);
-        }  
-        file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/CARRELLO.xml', $DOC_CART->asXML());                        
+        
+   
+           unset($DOC_CART->CARRELLO);
+            file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/CARRELLO.xml', $DOC_CART->asXML());
+         
+          
+      exit(header($Path1));
     }
+
+
 
     if(!isset($_SESSION["T_ID"]) ){
         $_SESSION['HIDE']=0;
@@ -39,25 +66,15 @@
     <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost/php_program/GameOfHistory/CSS_FILE/CHECKOUT_STYLE.css">
   </head> 
-
-<style>
-
-
-</style>  
-
 <body>
-    <p>
         <?php             
              $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.xml") or die("Error: Cannot create object");
-               $IndexEnd=count($DOC_CART);
-              $Prezzo=0;
+             $DOC_ART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/ARTICOLO1.xml") or die("Error: Cannot create object");
+             $DOC_USER=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/UTENTE.xml") or die("Error: Cannot create object");
+            $Prezzo=Extract_Prezzo_Finale($DOC_CART,$DOC_ART);
              
-              for($I=0; $I<$IndexEnd; $I++){
-                            $ARR_CART=Extract_CART_Info($DOC_CART,$I);
-                            $Prezzo=$Prezzo+Extract_Prezzo_BY_ID($ARR_CART[0]);              
-              }
         ?>
-    </p>
+ 
  <div class="Container_section">
       <?php  
         
@@ -106,10 +123,6 @@
          <?php  
         } 
         ?>  
-                   
-        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
-          <span class="material-symbols-outlined">support_agent</span>support      
-        </button>
 
       </div>    
     </div>      
@@ -148,17 +161,15 @@
             <h1 class="Testo_align Dim_testo text_color">USA BUONI O CODICI PROMO</h1>
             <div class="Container_usa_discont Container_DIM">
                 <p class="Font_For_Text text_color Dim_testo2">
-                    <input type="checkbox" class="" Name="PT_FEDELTA" value=""> <span>Usa punti Fedelta:<?php ?> PT;</span></br>
+                    <input type="checkbox" class="" Name="PT_FEDELTA" value=""> <span>Usa punti Fedelta:<?php echo $_SESSION['T_PUNTI']?> PT;</span></br>
                      <input  type="hidden"   name="SPESA"       value="<?php echo $Prezzo;?>" >
-                    <span>Codice Promo <input type="text" class="BOX_IN_DISC" Name="DISCOUNT" value=""></span></br>
-                    
                 </p>
             </div>
 
             <div class="Buttons_Conteiner_form ">
                 <div class="BUTTON_Conteiner ">
                     <button type="submit" name="PAGA" class="BUTTON_PAGA Font_For_Text" >
-                        <span>PAGA <?php echo $Prezzo; ?>&#8364;</span>
+                        <span>PAGA <?php if(isset($_SESSION["RESTANTE"])){echo $_SESSION["RESTANTE"];}else{echo $Prezzo;} ?>&#8364;</span>
                     </button>
                     <button type="button" name="ANNULLA" class="BUTTON_PAGA Font_For_Text" onclick="location.href='http://localhost/php_program/GameOfHistory/PHP_FILE/CARRELLO.php'">
                         <span>Torna indietro</span>
@@ -172,26 +183,27 @@
 
 </body>
 
-<script>
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("nav_hide").style.top = "0";
-    } else {
-      document.getElementById("nav_hide").style.top = "-150px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-  /* il menu viene nascosto quando si scende giù nella pagina*/
-</script>
 
 </html>
-
-
-
 <?php
+function Extract_Prezzo_Finale($DOC_CART,$DOC_ART){
+    $F_INDEX_CART=count($DOC_CART);
+    $F_INDEX_ART=count($DOC_ART);
+    $Prezzo_Finale=0;
 
+    for ($I=0; $I < $F_INDEX_CART; $I++) { 
+        $ARR_CART=Extract_CART_Info($DOC_CART,$I);
+
+        for ($J=0; $J <$F_INDEX_ART ; $J++) { 
+            $ARR_ART=Extract_Articolo_Info($DOC_ART,$J);
+            if(strcmp($ARR_CART[0],$ARR_ART[0])==0 && strcmp($ARR_CART[1],$_SESSION['T_ID'])==0 ){
+                
+               (double)$Prezzo_Finale=(double)$Prezzo_Finale+(double)$ARR_ART[3]; 
+            }
+        }
+    }    
+
+
+ return $Prezzo_Finale;   
+}
 ?>
-
-

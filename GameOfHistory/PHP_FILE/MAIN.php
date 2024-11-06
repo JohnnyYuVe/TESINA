@@ -6,9 +6,8 @@
   require_once "funzioni.php";
   $_SESSION["ATTIVA_FILTRO"]=0;
   $_SESSION['INIZIO']=0;
-
+  
   if(isset($_POST["FAV"]) ){
-
     if( empty($_POST["ID_art"] ) || empty($_POST["Categoria_art"] ) || empty($_POST["Nome_art"] ) || empty($_POST["Prezzo"]) ){
       echo "<p>CONTENUTO POST VUOTO1</p>";             
     }else{
@@ -146,10 +145,6 @@
          <?php  
         } 
         ?>  
-                   
-        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
-          <span class="material-symbols-outlined">support_agent</span>support      
-        </button>
 
       </div>    
     </div>
@@ -189,6 +184,7 @@
           <?php 
             for($INT_I; $INT_I<$INT_F; $INT_I++){
               $ARRAY_ART=Extract_Articolo_Info($DOC_ART, $INT_I);
+               if((int)$ARRAY_ART[9]==1){
           ?>
               <div class="articolo Font_For_Text">
                 <?php 
@@ -227,7 +223,8 @@
                  echo'</form>';                                 
                 ?>                    
               </div>
-              <?php 
+              <?php
+              } 
             }
             ?>                   
         </div>

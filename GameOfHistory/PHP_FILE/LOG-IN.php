@@ -6,21 +6,22 @@
   require_once "funzioni.php";
 
   $percorso=dirname($_SERVER['PHP_SELF']);
-  $Path="Location: ". $percorso ."/MAIN.php";
+  $Path0="Location: ". $percorso ."/EDIT.php";
+  $Path1="Location: ". $percorso ."/MAIN.php";
 
   if( isset($_POST['LOG_IN']) ){       
     if(empty($_POST['T_EMAIL']) || empty($_POST['T_PASS']) ){
 
       echo "<p>dati mancanti!!!</p>"; 
     }else{
-        echo "<p>"; 
-        echo"_POST[T_PASS]:".$_POST['T_PASS']."</br>";
-        echo"_POST[T_EMAIL]:".$_POST['T_EMAIL']."</br>";
-        echo "</p>"; 
-
-      $Result=Extract_Utente_Info($_POST['T_PASS'],$_POST['T_EMAIL']);
+    
+      $Result=Extract_Utente_Info($_POST['T_PASS'],$_POST['T_EMAIL'],);
       if($Result==0){
-        exit(header($Path));
+          if(strcmp($_SESSION['T_PRIVILEGGIO'],"ADMIN")==0){
+            exit(header($Path0));
+          }else{
+            exit(header($Path1));
+          }
       }else{
        echo "<p>DATI SBAGLIATI</p>";
       }          
@@ -28,7 +29,7 @@
   }
 
   if( isset($_POST['HOME']) ){  
-       exit(header($Path));
+       exit(header($Path1));
   }  
 ?>  
 

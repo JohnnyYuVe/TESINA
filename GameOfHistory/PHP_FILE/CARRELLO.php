@@ -4,10 +4,12 @@
   session_start();
   error_reporting(E_ALL);
   require_once "funzioni.php";
+
   $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.xml") or die("Error: Cannot create object");
   $DOC_PREF=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/PREFERITI.xml") or die("Error: Cannot create object");
-  $I_END_CART=count($DOC_PREF);
-  $I_END_PREF=count($DOC_CART);
+  $I_END_CART=count($DOC_CART);
+  $I_END_PREF=count($DOC_PREF);
+  $I=0;
 
   if(isset($_POST["PAGA"]) ){
     
@@ -20,42 +22,36 @@
 
   if(isset($_POST["later"]) ){  
     if(strlen( $_POST["ID_ART"] )==0){
-      
+
     }else{  
-          
-      for($Index_Start=0;$Index_Start<$I_END_CART;$Index_Start++){
-        $ARR_CART=Extract_CART_Info($DOC_CART,$Index_Start);
-      
-        if(strcmp($_SESSION['T_ID'],$ARR_CART[1])==0 && strcmp($_POST["ID_ART"],$ARR_CART[0])==0){              
-          Add_Record_To_Preferiti("PREFERITI", $_POST['ID_ART'], $_SESSION['T_ID']);            
-          unset($DOC_CART->CARRELLO[intval($Index_Start)]);
-          file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/CARRELLO.xml', $DOC_CART->asXML()); 
-          $Index_Start=$I_END_CART;
-        } 
-      }    
+             
+        for($I=0;$I<$I_END_CART;$I++){
+          $ARR_CART=Extract_CART_Info($DOC_CART,$I);
+          if(strcmp($_SESSION['T_ID'],$ARR_CART[1])==0 && strcmp($_POST["ID_ART"],$ARR_CART[0])==0){ 
+            Add_Record_To_Preferiti("PREFERITI", $_POST['ID_ART'], $_SESSION['T_ID']);            
+            unset($DOC_CART->CARRELLO[intval($I)]);
+            file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/CARRELLO.xml', $DOC_CART->asXML()); 
+            $I=$I_END_CART;
+          } 
+        }
+           
     }
   }
 
  
 if(isset($_POST["MOVE_TO_CART"]) ){
   if(strlen( $_POST["ID_ART"] )==0){
-  
-  }else{  
-   
-    for($Index_Start=0; $Index_Start<$I_END_PREF; $Index_Start++){  
-      $ARR_PREF=Extract_FAV_Info($DOC_PREF,$Index_Start);
-
-      if(strcmp($_SESSION['T_ID'],$ARR_PREF[1])==0 && strcmp($_POST["ID_ART"],$ARR_PREF[0])==0){
-      echo"<p>";
-      echo "_SESSION['T_ID']:".$_SESSION['T_ID']."";
-      echo"</p>";
-        Add_Record_To_Carrello("CARRELLO", $_POST['ID_ART'], $_SESSION['T_ID']);  
-        unset( $DOC_PREF->PREFERITO[intval($Index_Start)] );
-        file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/PREFERITI.xml', $DOC_PREF->asXML());
-        $Index_Start=$I_END_PREF;
-       
+    
+  }else{
+      for($I=0; $I<$I_END_PREF; $I++){
+        $ARR_PREF=Extract_FAV_Info($DOC_PREF,$I);
+        if(strcmp($_SESSION['T_ID'],$ARR_PREF[1])==0 && strcmp($_POST["ID_ART"],$ARR_PREF[0])==0){
+          Add_Record_To_Carrello("CARRELLO", $_POST['ID_ART'], $_SESSION['T_ID']);  
+          unset( $DOC_PREF->PREFERITO[intval($I)] );
+          file_put_contents('D:/xampp/htdocs/php_program/GameOfHistory/XML _FILE/XML/PREFERITI.xml', $DOC_PREF->asXML());
+          $I=$I_END_PREF;
+        }
       }
-    }
      
   }
 }
@@ -84,7 +80,6 @@ if(!isset($_SESSION["T_ID"]) ){
     $DOC_CART=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/CARRELLO.xml") or die("Error: Cannot create object");
     $DOC_PREF=simplexml_load_file("http://localhost/php_program/GameOfHistory/XML%20_FILE/XML/PREFERITI.xml") or die("Error: Cannot create object");
     $S=count($DOC_ART);
-    echo"_SESSION[T_ID]:".$_SESSION["T_ID"];
   ?>
 
   <div class="Container_section">
@@ -135,11 +130,6 @@ if(!isset($_SESSION["T_ID"]) ){
          <?php  
         } 
         ?>  
-                   
-        <button type="button" class="Button_Menu_Nav Font_For_Text" onclick="location.href='CUSTOMER_CARE.php' "> 
-          <span class="material-symbols-outlined">support_agent</span>support      
-        </button>
-
       </div>    
     </div>
 
@@ -224,9 +214,9 @@ if(!isset($_SESSION["T_ID"]) ){
               if(strcmp($ARRAY_ART[0],$ARRAY_PREF[0])==0 && strcmp($ARRAY_PREF[1],$_SESSION['T_ID'])==0 ){
     ?>      
           <div class="articolo_PREF Font_For_Text">
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">    
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post"> 
+
               <img src='<?php echo  $ARRAY_ART[5]; ?>' alt="Foto articolo">     
-               
                 <p class="text_color">
                   Nome_articolo:  <?php echo $ARRAY_ART[2]; ?></br>
                   Prezzo: &#8364; <?php echo $ARRAY_ART[3]; ?></br>
@@ -236,13 +226,13 @@ if(!isset($_SESSION["T_ID"]) ){
                   
                   <input  type="hidden"  name="ID_ART"     value="<?php echo strval($ARRAY_ART[0] );  ?>">                                
                 </p>
-                
                 <div class="BUTTON_Conteiner ">
                  <button type="submit" name="MOVE_TO_CART" class=" Font_For_Text">
                     <span>Sposta nel carrello</span>
                   </button>                             
                 </div>
-              </form>                                            
+
+            </form>                                            
           </div>
           <?php      
             }

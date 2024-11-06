@@ -1,0 +1,134 @@
+body{                 
+  background-image: url("http://localhost/php_program/GameOfHistory/IMG_FILE/view-3d-arcade-game-box.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;       
+}
+
+p{
+  color:  red;
+}
+h1{
+  color:  white;
+}
+.Font_For_Text{
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: none;
+  margin: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.align{
+  text-align: center;
+}
+
+.MAIN_CONTAINER{
+  width: 95%;
+  height: 95%;
+
+  border: 5px solid;
+  border-radius: 15px;
+  background-color: #8A2BE2;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.CONTAINER_SEARCH{
+  width: 100%;
+}
+
+.CONTAINER_ART_INFO{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  position: relative;
+}
+
+.CONTAINER_SX_EDIT{
+  width: 50%;
+  text-align: left;
+  font-size: 40px;
+   display: flex;
+  flex-wrap: wrap;
+}
+
+.CONTAINER_BUTTON{
+  width: 100%;
+}
+
+.BOX_TEXT{
+  width: 200px;
+  height: 60px;
+   border: 3px solid;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.FONT_TEXT{
+  font-size: 40px;
+}
+.TITLE{
+  width: 100%;
+  height: 150px;
+  font-size: 25PX;
+}
+
+.CONTAINER_DX_EDIT{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text_1{
+  width: 25%;
+  text-align: left;
+  font-size: 50px;
+}
+ 
+.text_1 span{
+  display: block;
+  text-align: left;
+}
+
+.input_field{
+  width: 45%;
+  text-align: left;
+}
+
+.input_field input{
+  display:block;
+  text-align: left;
+}
+
+.COUNTAINER_HOME{
+  width: 100%;
+  height: 80px;
+  justify-content: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Button_Art{
+ border-radius:10px;
+ width: 70px;
+ height: 70px;
+}
+
+.Button_Art:hover{
+  background-color: #3e8e41;
+   transform: scale(1.2);
+}

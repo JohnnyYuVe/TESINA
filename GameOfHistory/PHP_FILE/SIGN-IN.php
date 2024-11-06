@@ -17,9 +17,21 @@
     if(empty($_POST['T_Nome']) || empty($_POST['T_Cognome'])|| empty($_POST['T_EMAIL'])|| empty($_POST['T_PASS']) || empty($_POST['T_Eta'])|| empty($_POST['T_Sesso']) ){
       echo "<p>dati mancanti!!!</p>"; 
     }else{
+
+      $ARR_USER_INFO[0]=$CLIENT_ID;
+      $ARR_USER_INFO[1]=$_POST['T_Nome'];
+      $ARR_USER_INFO[2]=$_POST['T_Cognome'];
+      $ARR_USER_INFO[3]=$_POST['T_EMAIL'];
+      $ARR_USER_INFO[4]=$_POST['T_PASS'];
+      $ARR_USER_INFO[5]=$_POST['T_Eta'];
+      $ARR_USER_INFO[6]=$_POST['T_Sesso'];
+      $ARR_USER_INFO[7]=$DATA_ISCR;
+      $ARR_USER_INFO[8]=0;
+      $ARR_USER_INFO[9]=$MEMBER;
+      $ARR_USER_INFO[10]="UTENTE";
             
       if( Check_User_Email_already_Used($DOC_UTENTE,$_POST['T_EMAIL'])==0 ){    
-        Add_Record_To_Utente($DOC_UTENTE,$CLIENT_ID,$_POST['T_Nome'],$_POST['T_Cognome'],$_POST['T_Eta'],$_POST['T_EMAIL'],$_POST['T_PASS'],$_POST['T_Sesso'],$DATA_ISCR,"0", $MEMBER);
+        Add_Record_To_Utente($DOC_UTENTE,$ARR_USER_INFO);
       }else{
         //messaggio popup che dice l'email non è valido;
          echo "<p> email non valida</p>";

@@ -39,13 +39,13 @@ body{
 
 .INFO_Conteiner span{
   color: black;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .INFO_Conteiner p{
   color: white;
   position: relative;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .INFO1{
@@ -113,7 +113,7 @@ body{
   background-color: /*#8A2BE2*/none ;
   position: fixed ;
   text-align: center;
-  left: 10%;
+   left: 17%;
   top: 0%;
   border-radius: 100px;
   padding: 10px 25px;
